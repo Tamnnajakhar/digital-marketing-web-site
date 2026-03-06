@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Marketing Services</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: white;
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .hero {
+            max-width: 1300px;
+            background: #eef2f5;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 80px 8%;
+            flex-wrap: wrap;
+        }
+
+        .hero-left {
+            flex: 1;
+        }
+
+        .hero-left h1 {
+            font-size: 60px;
+            font-weight: 700;
+            color: #111;
+            line-height: 1.1;
+        }
+
+        .hero-left p {
+            margin: 25px 0;
+            font-size: 22px;
+            color: #555;
+        }
+
+        .hero-left a {
+            padding: 18px 35px;
+            font-size: 18px;
+            background: red;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .hero-left a:hover {
+            background: #eef2f5;
+            border: red 2px solid;
+            color: red;
+        }
+
+        .hero-right {
+            flex: 1;
+            text-align: right;
+        }
+
+        .hero-right img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+        }
+
+        .logos {
+            background: #eef2f5;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .logos img {
+            width: 80%;
+            max-width: 900px;
+            opacity: 0.7;
+        }
+
+        @media(max-width:900px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-right {
+                text-align: center;
+                margin-top: 40px;
+            }
+
+            .hero-left h1 {
+                font-size: 40px;
+            }
+        }
+
+
+
+
+        .hero-section {
+            max-width: 1300px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 80px 8%;
+            gap: 60px;
+        }
+
+        .left-content {
+            flex: 1;
+        }
+
+        .left-content h1 {
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 30px;
+        }
+
+        .left-content p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .left-content a {
+            background: red;
+            color: white;
+            padding: 16px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            border: 2px solid transparent;
+        }
+
+        .left-content a:hover {
+            background: white;
+            color: red;
+            border: 2px solid red;
+        }
+
+        .right-images {
+            flex: 1;
+            display: flex;
+            gap: 30px;
+        }
+
+        .image-box {
+            position: relative;
+            width: 100%;
+            height: auto;
+        }
+
+        .image-box img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+
+        @media(max-width:992px) {
+            .hero-section {
+                flex-direction: column;
+            }
+
+            .right-images {
+                flex-direction: column;
+                width: 100%;
+            }
+        }
+
+
+
+
+        .growth-section {
+            max-width: 1300px;
+            background: #eef2f5;
+            padding: 100px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .container h2 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 40px;
+            line-height: 1.2;
+            color: #222;
+        }
+
+        .container p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        .proposal-btn {
+            margin-top: 30px;
+            background: red;
+            color: white;
+            padding: 18px 40px;
+            border: none;
+            font-size: 18px;
+            font-weight: 600;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .proposal-btn:hover {
+            background: white;
+            color: red;
+            border: 2px solid red;
+        }
+
+
+
+        @media(max-width:768px) {
+
+            .container h2 {
+                font-size: 32px;
+            }
+
+            .container p {
+                font-size: 16px;
+            }
+
+            .proposal-btn {
+                width: 100%;
+            }
+
+        }
+
+
+
+
+
+        .marketing {
+            max-width: 1300px;
+            padding: 70px 10%;
+            text-align: center;
+            background: white;
+        }
+
+        .marketing h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .top-text {
+            max-width: 1000px;
+            margin: 10px auto;
+            font-size: 18px;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .red {
+            color: red;
+            text-decoration: none;
+        }
+
+        .marketing-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+
+        .marketing-right img {
+            width: 100%;
+            max-width: 1100px;
+            height: auto;
+        }
+
+
+
+
+
+
+        .why-choose {
+            padding: 80px 10%;
+            max-width: 1300px;
+            margin: auto;
+            background: #eef2f5;
+        }
+
+        .why-choose h1 {
+            text-align: center;
+            font-size: 48px;
+            margin-bottom: 60px;
+        }
+
+        .point {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 50px;
+        }
+
+        .icon {
+            color: red;
+            font-size: 28px;
+            margin-right: 20px;
+            margin-top: 5px;
+        }
+
+        .content h2 {
+            font-size: 34px;
+            margin-bottom: 10px;
+        }
+
+        .content p {
+            color: #555;
+            line-height: 1.7;
+            font-size: 18px;
+        }
+
+
+
+
+
+
+
+
+        .pricing-section {
+            max-width: 1300px;
+            margin: auto;
+            text-align: center;
+            padding: 80px 10% 20px 10%;
+        }
+
+        .pricing-section h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+            color: #222;
+        }
+
+        .pricing-section p {
+            max-width: 950px;
+            margin: auto;
+            font-size: 18px;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .pricing-section a {
+            color: red;
+            text-decoration: none;
+        }
+
+        /* .pricing-section a:hover {
+            text-decoration: underline;
+        } */
+
+
+
+
+
+
+        .pricing {
+            max-width: 1300px;
+            margin: auto;
+            padding: 0 10% 80px 10%;
+        }
+
+        .pricing-container {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        @media(max-width:992px) {
+            .pricing-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                width: 100%;
+                max-width: 400px;
+            }
+        }
+
+        .card {
+            background: white;
+            width: 100%;
+            max-width: 350px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-header {
+            background: red;
+            padding: 40px;
+            font-size: 24px;
+            font-weight: bold;
+
+
+        }
+
+        .card ul {
+            list-style: none;
+            padding: 30px;
+            text-align: left;
+        }
+
+        .card ul li {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 17px;
+        }
+
+        .card ul li span {
+            color: red;
+            font-weight: bold;
+        }
+
+
+        button,
+        .pricing-btn {
+            background: red;
+            border: none;
+            color: white;
+            padding: 15px 25px;
+            margin: 20px;
+            font-size: 16px;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        button:hover,
+        .pricing-btn:hover {
+            background: white;
+            color: red;
+            border: 2px solid red;
+        }
+
+
+        .featured .ribbon {
+            position: absolute;
+            background: #ffc107;
+            color: #333;
+            padding: 5px 0;
+            width: 150px;
+            text-align: center;
+            transform: rotate(45deg);
+            top: 25px;
+            right: -35px;
+            font-size: 14px;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+
+
+
+
+
+
+
+
+        .section1 {
+            background: #eef2f5;
+            width: 100%;
+            margin: 80px auto;
+            padding: 80px 10%;
+        }
+
+        .heading1 {
+            text-align: center;
+            font-size: 48px;
+            font-weight: 600;
+            margin-bottom: 60px;
+            color: #222;
+        }
+
+        .container1 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .left1 {
+            flex: 1;
+        }
+
+        .left1 p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #444;
+            margin-bottom: 25px;
+        }
+
+        .bold-text1 {
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        .btn1 {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 18px 40px;
+            background: red;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 1px;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn1:hover {
+            background: #eef2f5;
+            color: red;
+            border: 2px solid red;
+        }
+
+        .right1 {
+            flex: 1;
+        }
+
+        .right1 img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        @media(max-width:992px) {
+            .container1 {
+                flex-direction: column;
+            }
+
+            .heading1 {
+                font-size: 34px;
+            }
+        }
+
+
+        .section {
+            max-width: 1300px;
+            margin: 80px auto;
+            padding: 80px 10%;
+        }
+
+        .section h1 {
+            text-align: center;
+            font-size: 45px;
+            font-weight: 600;
+            margin-bottom: 70px;
+            color: #222;
+            line-height: 1.2;
+        }
+
+        .item {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 70px;
+            align-items: flex-start;
+        }
+
+        .number {
+            font-size: 40px;
+            font-weight: 700;
+            color: red;
+            min-width: 80px;
+        }
+
+        .content h2 {
+            font-size: 34px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            color: #222;
+        }
+
+        .content p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .content a {
+            color: red;
+            text-decoration: none;
+        }
+
+        .content a:hover {
+            text-decoration: underline;
+            color: red;
+            text-decoration: none;
+        }
+
+        @media(max-width:768px) {
+            .section h1 {
+                font-size: 32px;
+            }
+
+            .item {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .number {
+                font-size: 60px;
+            }
+
+            .content h2 {
+                font-size: 24px;
+            }
+        }
+
+
+
+
+
+
+
+        .section2 {
+            width: 100%;
+            padding: 80px 10%;
+            background: #eef2f5;
+            margin: 80px auto;
+        }
+
+        .section2 h1 {
+            text-align: center;
+            font-size: 45px;
+            font-weight: 600;
+            margin-bottom: 70px;
+            color: #222;
+            line-height: 1.2;
+        }
+
+        .container2 {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .left2 {
+            flex: 1;
+        }
+
+        .left2 p {
+            font-size: 18px;
+            line-height: 1.9;
+            margin-bottom: 25px;
+            color: #444;
+        }
+
+        .bold2 {
+            font-weight: 700;
+            font-size: 20px;
+            color: #222;
+        }
+
+        .btn2 {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 18px 40px;
+            background: red;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 1px;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn2:hover {
+            background: #eef2f5;
+            color: red;
+            border: 2px solid red;
+        }
+
+        .right2 {
+            flex: 1;
+            position: relative;
+        }
+
+        .right2 img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+
+        @media(max-width:992px) {
+            .container2 {
+                flex-direction: column;
+            }
+
+            .section h1 {
+                font-size: 32px;
+            }
+
+            .info-card {
+                position: static;
+                margin-top: 20px;
+            }
+        }
+
+
+
+
+
+
+
+        .faq-section {
+            width: 100%;
+            padding: 40px 5%;
+            margin: 70px auto;
+        }
+
+        .faq-section h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .faq {
+            margin-bottom: 15px;
+        }
+
+        .faq-question {
+            background: red;
+            color: #fff;
+            padding: 15px 20px;
+            font-weight: 600;
+            border-radius: 4px;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: 0.3s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question:hover {
+            background: #eef2f5;
+            color: red;
+            border: 2px solid red;
+        }
+
+        .faq-answer {
+            background: #f5f7f9;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+            padding: 0 20px;
+            border-left: 4px solid red;
+        }
+
+        .faq-answer p {
+            padding: 15px 0;
+            color: #444;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .faq.active .faq-answer {
+            max-height: 300px;
+        }
+
+        .faq-question .arrow {
+            transition: transform 0.4s ease;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .faq.active .faq-question .arrow {
+            transform: rotate(90deg);
+        }
+
+        .btn-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 35px;
+            background: red;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 4px;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #eef2f5;
+            color: red;
+            border: 2px solid red;
+        }
+
+        @media(max-width:768px) {
+
+            .hero,
+            .hero-section,
+            .growth-section,
+            .marketing,
+            .why-choose,
+            .pricing-section,
+            .pricing,
+            .section1,
+            .section,
+            .section2 {
+                padding-left: 20px;
+                padding-right: 20px;
+                padding-top: 50px;
+                padding-bottom: 50px;
+            }
+
+            .hero-left h1,
+            .left-content h1,
+            .container h2,
+            .marketing h1,
+            .why-choose h1,
+            .pricing-section h1,
+            .heading1,
+            .section h1,
+            .section2 h1 {
+                font-size: 28px !important;
+            }
+
+            .hero-left h1 {
+                font-size: 36px !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="hero">
+
+        <div class="hero-left">
+            <h1>Expert <br> Digital <br> Solutions</h1>
+            <p>Accelerate Your Business Revenue Today</p>
+            <a href="#">REQUEST A FREE STRATEGY</a>
+        </div>
+
+        <div class="hero-right">
+            <img src="https://www.lyfemarketing.com/wp-content/uploads/2024/06/cls-banner-digimar.png"
+                alt="Marketing Image">
+        </div>
+
+    </section>
+    <div class="logos">
+        <img src="https://www.lyfemarketing.com/wp-content/uploads/2019/12/social-media-marketing-company-copy-copy.png"
+            alt="Logos">
+    </div>
+
+
+
+
+
+    <section class="hero-section">
+
+        <div class="left-content">
+            <h1>
+                Top-Rated Online Marketing for Growing Small Businesses
+            </h1>
+
+            <p>
+                Boost your leads, online sales, and overall income with our proven strategies. We have helped thousands
+                of businesses generate millions in revenue. Let us do the same for you.
+            </p>
+
+            <a href="#">START YOUR JOURNEY NOW</a>
+        </div>
+
+
+        <div class="right-images">
+
+            <div class="image-box">
+                <img src="https://www.lyfemarketing.com/wp-content/uploads/2024/06/carousel-egyptian-png.png"
+                    alt="Case Study 1">
+
+            </div>
+
+            <div class="image-box">
+                <img src="https://www.lyfemarketing.com/wp-content/uploads/2024/06/carousel-ellura-png.png"
+                    alt="Case Study 2">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="growth-section">
+
+        <div class="container">
+
+            <h2>
+                Accelerating Growth Through Digital Channels
+            </h2>
+
+            <p>
+                Companies of every size can leverage online marketing to promote their offerings cost-effectively. From
+                startups to multi-location enterprises, the web is the key to expansion.
+            </p>
+
+            <p>
+                Partnering with experts allows you to reach a global audience 24/7. A strong digital footprint ensures
+                your customers can always find you and stay engaged.
+            </p>
+
+            <p>
+                For over a decade, we've empowered small businesses to maximize their ROI. Our team tailors strategies
+                to fit your specific goals and budget. Book a consultation to see how we can help.
+            </p>
+
+            <button class="proposal-btn">
+                GET YOUR FREE QUOTE
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+    <section class="marketing">
+
+        <h1>The Importance of Digital Marketing for Your Brand</h1>
+
+        <p class="top-text">
+            The online landscape is evolving rapidly. With billions spent on digital ads annually, relying solely on
+            traditional methods is no longer sufficient to stay competitive.
+        </p>
+
+        <p class="top-text">
+            A dedicated agency can elevate your brand and drive sales through targeted campaigns. Digital services
+            enable you to:
+        </p>
+
+        <div class="marketing-container">
+
+            <div class="marketing-right">
+
+                <img src="https://www.lyfemarketing.com/wp-content/uploads/2025/04/funnel-digital-marketing2.png"
+                    alt="marketing diagram">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+    <section class="why-choose">
+
+        <h1>Why Partner With Us for Your Marketing Needs</h1>
+
+        <div class="point">
+
+            <div class="icon">✔</div>
+
+            <div class="content">
+                <h2>Over $300 Million Generated in Client Revenue</h2>
+
+                <p>
+                    Your primary goal is revenue growth. Businesses choose us because we deliver measurable financial
+                    results that impact the bottom line.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="point">
+
+            <div class="icon">✔</div>
+
+            <div class="content">
+                <h2>Over 4.8 Million Leads Delivered</h2>
+
+                <p>
+                    We don't just do e-commerce; we excel at lead generation too. We've successfully captured millions
+                    of high-quality leads for our partners.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="point">
+
+            <div class="icon">✔</div>
+
+            <div class="content">
+                <h2>Decades of Collective Experience</h2>
+
+                <p>
+                    Since 2011, we've poured millions of hours into perfecting small business campaigns. Our deep
+                    industry knowledge ensures we can deliver results for any niche.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="pricing-section">
+
+        <h1>Transparent Marketing Packages</h1>
+
+        <p>
+            Investment typically ranges from $500 to $10,000+ monthly, based on your specific needs and goals. Review
+            our tiers below and contact us for a tailored estimate.
+        </p>
+
+    </section>
+
+
+
+
+
+    <section class="pricing">
+
+        <div class="pricing-container">
+
+            <div class="card">
+
+                <div class="card-header">STARTER TIER</div>
+
+                <ul>
+                    <li>✔ <span>Image Posts</span></li>
+                    <li>✔ Facebook & Instagram</li>
+                    <li>✔ 12 Posts Per Month</li>
+                    <li>✔ Page Monitoring & Responding</li>
+                    <li>✔ Sponsored Posts & Follower Ads</li>
+                </ul>
+
+                <a href="#" class="pricing-btn">SELECT THIS PLAN</a>
+
+            </div>
+
+
+            <div class="card featured">
+
+                <div class="ribbon">Featured</div>
+
+                <div class="card-header">GROWTH TIER</div>
+
+                <ul>
+                    <li>✔ <span>Vertical Videos</span></li>
+                    <li>✔ Instagram & TikTok</li>
+                    <li>✔ 12 Posts Per Month</li>
+                    <li>✔ Page Monitoring & Responding</li>
+                    <li>✔ Sponsored Posts & Follower Ads</li>
+                </ul>
+
+                <a href="#" class="pricing-btn">SELECT THIS PLAN</a>
+
+            </div>
+
+            <div class="card">
+
+                <div class="card-header">BEST PLAN</div>
+
+                <ul>
+                    <li>✔ <span>Vertical Videos</span></li>
+                    <li>✔ Instagram & TikTok</li>
+                    <li>✔ 20 Posts Per Month</li>
+                    <li>✔ Page Monitoring & Responding</li>
+                    <li>✔ Sponsored Posts & Follower Ads</li>
+                </ul>
+
+                <a href="#" class="pricing-btn">SELECT THIS PLAN</a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+    <section class="section1">
+
+        <h1 class="heading1">
+            Generating Over $500k in Sales for an E-commerce Brand
+        </h1>
+
+        <div class="container1">
+
+            <div class="left1">
+                <p>
+                    A premium hair extension retailer needed to boost their online visibility and sales figures.
+                </p>
+
+                <p>
+                    We implemented a mix of Google Ads and strategic social content to drive high-intent traffic
+                    directly to their store.
+                </p>
+
+                <p class="bold-text1">
+                    The result was nearly 6,000 purchases and a massive 539% return on ad spend.
+                </p>
+
+                <a href="#" class="btn1">
+                    VIEW THE COMPLETE CASE STUDY
+                </a>
+            </div>
+
+            <div class="right1">
+                <img src="https://www.lyfemarketing.com/wp-content/uploads/2024/06/indique-go-ad-png.png"
+                    alt="Case Study Image">
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="section">
+
+        <h1>
+            Our Competitive Advantage in Digital Marketing
+        </h1>
+
+        <div class="item">
+            <div class="number">1</div>
+            <div class="content">
+                <h2>Drive Quality Traffic</h2>
+                <p>
+                    We specialize in bringing qualified visitors to your site, whether B2B or B2C, ensuring your
+                    campaigns reach the right eyes.
+                </p>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="number">2</div>
+            <div class="content">
+                <h2>Tangible Sales & Leads</h2>
+                <p>
+                    Traffic is good, but conversions are better. We focus on turning visitors into paying customers and
+                    valuable leads.
+                </p>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="number">3</div>
+            <div class="content">
+                <h2>Maximized ROI</h2>
+                <p>
+                    Profitability is key. We optimize every dollar spent to ensure your marketing investment yields a
+                    healthy return.
+                </p>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="number">4</div>
+            <div class="content">
+                <h2>Experience Across 100+ Industries</h2>
+                <p>
+                    We've seen it all. With experience in over a hundred different sectors, we know how to adapt to your
+                    specific market.
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+
+    <section class="section2">
+
+        <h1>
+            Capturing 6,000+ Leads in Just 6 Months
+        </h1>
+
+        <div class="container2">
+
+            <div class="left2">
+
+                <p>
+                    An educational event company needed help filling seats for their seminars on business grants and
+                    real estate investing.
+                </p>
+
+                <p>
+                    They approached us to boost registration numbers. We utilized audience segmentation to deliver
+                    highly relevant ads to potential attendees.
+                </p>
+
+                <p class="bold2">
+                    The campaign was a success, generating 1,000 fresh leads every month for half a year.
+                </p>
+
+                <a href="#" class="btn2">
+                    READ THE SUCCESS STORY
+                </a>
+
+            </div>
+
+            <div class="right2">
+                <img src="https://www.lyfemarketing.com/wp-content/uploads/2024/06/confidential-gr5-png.png"
+                    alt="Case Study">
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <section class="faq-section">
+
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq">
+            <div class="faq-question">Define Digital Marketing?<span class="arrow">&gt;</span></div>
+            <div class="faq-answer">
+                <p>It involves promoting your business through online channels like search engines, social media, and
+                    email to drive growth.</p>
+            </div>
+        </div>
+
+        <div class="faq">
+            <div class="faq-question">What does a marketing agency do?<span class="arrow">&gt;</span></div>
+            <div class="faq-answer">
+                <p>Agencies are teams of experts who manage your online campaigns, handling everything from content
+                    creation to ad management.</p>
+            </div>
+        </div>
+
+        <div class="faq">
+            <div class="faq-question">Why do I need digital marketing?<span class="arrow">&gt;</span></div>
+            <div class="faq-answer">
+                <p>It allows you to reach a wider audience more affordably than traditional media, while providing
+                    measurable results.</p>
+            </div>
+        </div>
+
+        <div class="faq">
+            <div class="faq-question">What is the typical cost?<span class="arrow">&gt;</span></div>
+            <div class="faq-answer">
+                <p>Budgets vary widely, usually between $500 and $10,000 monthly, depending on the scope and
+                    aggressiveness of the campaign.</p>
+            </div>
+        </div>
+
+        <div class="btn-container">
+            <a href="#" class="btn">REQUEST YOUR PROPOSAL</a>
+        </div>
+
+    </section>
+
+    <script>
+        const faqs = document.querySelectorAll(".faq");
+
+        faqs.forEach(faq => {
+            faq.querySelector(".faq-question").addEventListener("click", () => {
+                faq.classList.toggle("active");
+            });
+        });
+    </script>
+</body>
+
+</html>
