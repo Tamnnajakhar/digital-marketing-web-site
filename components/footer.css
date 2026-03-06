@@ -1,0 +1,117 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}.footer {
+  background:black;
+  padding: 60px 8%;
+  font-family: 'Segoe UI', sans-serif;
+  color:white;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.footer-col h4::before {
+  content: "•";
+  color: red;
+  margin-right: 8px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: rgb(235, 233, 233);
+  transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #ff6a00;
+}
+
+.office-title {
+  color: #ff6a00;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+.contact-info {
+  margin-top: 10px;
+}
+
+/* Bottom */
+.footer-bottom {
+  margin-top: 50px;
+  padding-top: 25px;
+  border-top: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-bottom .badge {
+  background: #d1d1d1;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-right: 10px;
+  font-size: 12px;
+}
+
+.footer-bottom .center {
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer-bottom .center a {
+  color: #ff6a00;
+  text-decoration: none;
+}
+
+.footer-bottom .right {
+  color: #ff6a00;
+  font-weight: 500;
+}
+
+/* Note */
+.footer-note {
+  margin-top: 25px;
+  font-size: 12px;
+  color: #666;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+}
