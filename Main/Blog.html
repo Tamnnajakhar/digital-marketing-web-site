@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Blog Page</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial;
+      }
+
+      body {
+        background: #f4f4f4;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      .subtitle {
+        text-align: center;
+        color: #666;
+        margin-bottom: 30px;
+      }
+
+      /* FILTER */
+
+      .blog-filter {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        margin-bottom: 30px;
+      }
+
+      .blog-filter button {
+        padding: 10px 16px;
+        border: none;
+        background: #eee;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 14px;
+      }
+
+      .blog-filter button:hover {
+        background: #d40000;
+        color: white;
+      }
+
+      .blog-filter .active {
+        background: #d40000;
+        color: white;
+      }
+
+      /* BLOG GRID */
+
+      .blog-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+      }
+
+      /* BLOG CARD */
+
+      .blog-card {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: 0.3s;
+      }
+
+      .blog-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .blog-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .blog-content {
+        padding: 20px;
+      }
+
+      .blog-content h3 {
+        margin-bottom: 10px;
+        font-size: 18px;
+      }
+
+      .meta {
+        color: #d40000;
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+
+      /* PAGINATION */
+
+      .pagination {
+        text-align: center;
+        margin-top: 40px;
+      }
+
+      .pagination button {
+        padding: 8px 14px;
+        border: 1px solid #ddd;
+        background: white;
+        margin: 4px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      .pagination button:hover {
+        background: #d40000;
+        color: white;
+      }
+
+      .pagination .active {
+        background: #d40000;
+        color: white;
+      }
+
+      /* MOBILE */
+
+      @media (max-width: 768px) {
+        .blog-card img {
+          height: 180px;
+        }
+
+        .blog-content h3 {
+          font-size: 16px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .blog-filter button {
+          font-size: 13px;
+          padding: 8px 12px;
+        }
+
+        .blog-card img {
+          height: 160px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Our Blog</h1>
+
+      <p class="subtitle">
+        Explore the latest tips & insights on digital marketing.
+      </p>
+
+      <div class="blog-filter">
+        <button class="active" data-category="All">All</button>
+        <button data-category="Social Media">Social Media</button>
+        <button data-category="Digital Marketing">Digital Marketing</button>
+        <button data-category="Facebook Advertising">
+          Facebook Advertising
+        </button>
+        <button data-category="SEO">SEO</button>
+        <button data-category="Email Marketing">Email Marketing</button>
+        <button data-category="Meta Ads">Meta Ads</button>
+        <button data-category="Google Ads">Google Ads</button>
+        <button data-category="Website Design">Website Design</button>
+      </div>
+
+      <div class="blog-grid" id="blogContainer"></div>
+
+      <div class="pagination" id="pagination"></div>
+    </div>
+
+    <script>
+      const blogs = [
+        {
+          title: "Social Media Strategy",
+          category: "Social Media",
+          date: "March 30, 2024",
+          image: "../images/Social-Media-Strategy.jfif",
+          text: "Learn how to build an effective social media strategy for business growth.",
+        },
+
+        {
+          title: "SEO Tips to Boost Rankings",
+          category: "SEO",
+          date: "March 28, 2023",
+          image: "https://picsum.photos/600/400?2",
+          text: "Learn effective SEO strategies.",
+        },
+
+        {
+          title: "Social Media Marketing Strategies",
+          category: "Social Media",
+          date: "March 20, 2023",
+          image: "https://picsum.photos/600/400?3",
+          text: "Grow your online presence.",
+        },
+
+        {
+          title: "Email Marketing Guide",
+          category: "Email Marketing",
+          date: "March 15, 2023",
+          image: "https://picsum.photos/600/400?4",
+          text: "Build powerful email campaigns.",
+        },
+
+        {
+          title: "Facebook Ads Guide",
+          category: "Facebook Advertising",
+          date: "March 8, 2023",
+          image: "https://picsum.photos/600/400?5",
+          text: "Run profitable Facebook ads.",
+        },
+
+        {
+          title: "Google Ads Basics",
+          category: "Google Ads",
+          date: "February 25, 2023",
+          image: "https://picsum.photos/600/400?6",
+          text: "Start advertising on Google.",
+        },
+
+        {
+          title: "Website Design Tips",
+          category: "Website Design",
+          date: "February 20, 2023",
+          image: "https://picsum.photos/600/400?7",
+          text: "Create modern responsive websites.",
+        },
+
+        {
+          title: "Meta Ads Strategy",
+          category: "Meta Ads",
+          date: "February 15, 2023",
+          image: "https://picsum.photos/600/400?8",
+          text: "Improve Meta advertising results.",
+        },
+
+        {
+          title: "Digital Marketing Guide",
+          category: "Digital Marketing",
+          date: "February 10, 2023",
+          image: "https://picsum.photos/600/400?9",
+          text: "Complete digital marketing overview.",
+        },
+      ];
+
+      const blogContainer = document.getElementById("blogContainer");
+      const pagination = document.getElementById("pagination");
+
+      const blogsPerPage = 6;
+
+      let currentPage = 1;
+      let filteredBlogs = blogs;
+
+      /* DISPLAY BLOG */
+
+      function displayBlogs(page) {
+        blogContainer.innerHTML = "";
+
+        let start = (page - 1) * blogsPerPage;
+        let end = start + blogsPerPage;
+
+        let paginatedItems = filteredBlogs.slice(start, end);
+
+        paginatedItems.forEach((blog) => {
+          blogContainer.innerHTML += `
+
+<div class="blog-card">
+
+<img src="${blog.image}" loading="lazy">
+
+<div class="blog-content">
+
+<h3>${blog.title}</h3>
+
+<p class="meta">${blog.category} | ${blog.date}</p>
+
+<p>${blog.text}</p>
+
+</div>
+
+</div>
+
+`;
+        });
+      }
+
+      function setupPagination() {
+        pagination.innerHTML = "";
+
+        let pageCount = Math.ceil(filteredBlogs.length / blogsPerPage);
+
+        /* PREVIOUS BUTTON */
+
+        let prev = document.createElement("button");
+
+        prev.innerText = "Prev";
+
+        prev.disabled = currentPage === 1;
+
+        prev.addEventListener("click", () => {
+          if (currentPage > 1) {
+            currentPage--;
+
+            displayBlogs(currentPage);
+
+            setupPagination();
+          }
+        });
+
+        pagination.appendChild(prev);
+
+        /* PAGE NUMBERS */
+
+        for (let i = 1; i <= pageCount; i++) {
+          let btn = document.createElement("button");
+
+          btn.innerText = i;
+
+          if (i === currentPage) {
+            btn.classList.add("active");
+          }
+
+          btn.addEventListener("click", () => {
+            currentPage = i;
+
+            displayBlogs(currentPage);
+
+            setupPagination();
+          });
+
+          pagination.appendChild(btn);
+        }
+
+        /* NEXT BUTTON */
+
+        let next = document.createElement("button");
+
+        next.innerText = "Next";
+
+        next.disabled = currentPage === pageCount;
+
+        next.addEventListener("click", () => {
+          if (currentPage < pageCount) {
+            currentPage++;
+
+            displayBlogs(currentPage);
+
+            setupPagination();
+          }
+        });
+
+        pagination.appendChild(next);
+      }
+
+      /* FILTER */
+
+      const filterButtons = document.querySelectorAll(".blog-filter button");
+
+      filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          filterButtons.forEach((btn) => btn.classList.remove("active"));
+
+          button.classList.add("active");
+
+          const category = button.getAttribute("data-category");
+
+          if (category === "All") {
+            filteredBlogs = blogs;
+          } else {
+            filteredBlogs = blogs.filter((blog) => blog.category === category);
+          }
+
+          currentPage = 1;
+
+          displayBlogs(currentPage);
+
+          setupPagination();
+        });
+      });
+
+      displayBlogs(currentPage);
+      setupPagination();
+    </script>
+  </body>
+</html>
